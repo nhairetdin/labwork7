@@ -2,6 +2,7 @@ $(document).on("ready", function () {
   databaseHandler.createDatabase();
 });
 
+// user clicks register-button in register form (register.html)
 function addUser() {
   var name = $("#txtName").val();
   var password = $("#txtPassword").val();
@@ -19,6 +20,7 @@ function addUser() {
   }
 }
 
+// user clicks login-button
 function login() {
   var name = $("#loginName").val();
   var password = $("#loginPassword").val();
@@ -26,6 +28,9 @@ function login() {
   userHandler.getUser(userid)
 }
 
+
+
+///////////////////////////////////MAP STUFF/////////////////////////////////////
 function getMapLocation() {
   navigator.geolocation.getCurrentPosition
     (onMapSuccess, onMapError, { enableHighAccuracy: true });

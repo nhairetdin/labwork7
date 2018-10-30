@@ -18,6 +18,7 @@ var userHandler = {
       function () { }
     );
   },
+  // get user from database by ID
   getUser: function(userid) {
     databaseHandler.db.transaction(
       function(tx) {
@@ -25,7 +26,7 @@ var userHandler = {
           "SELECT * from user WHERE _id = ?",
           [userid],
           function(tx, results) {
-            console.log(results)
+            // if the resultset contains a row, user gave the correct username+password, open tabs.html
             if(results.rows.length === 1) {
               openPage('tabs')
             }
