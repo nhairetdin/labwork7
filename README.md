@@ -11,8 +11,12 @@
 
 5. mobileui install header input grid tab page
 
-6. edit index.html and tabs.html
+6. mobileui install menu
+
+7. cordova plugin add cordova-plugin-geolocation
+
+8. edit index.html and tabs.html
 
 ## run:
 
-mobileui preview
+mobileui preview OR cordova run browser
