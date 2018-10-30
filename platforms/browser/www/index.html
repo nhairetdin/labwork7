@@ -2,13 +2,23 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="mobileui/style.css">
   <meta name="format-detection" content="telephone=no">
   <meta charset="utf-8">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="stylesheet" href="https://openlayers.org/en/v4.4.2/css/ol.css" type="text/css">
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/databaseHandler.js"></script>
+  <script type="text/javascript" src="js/userHandler.js"></script>
+  
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="https://openlayers.org/en/v4.4.2/build/ol.js"></script>
   <title>Apache Cordova</title>
 </head>
 
@@ -20,20 +30,22 @@
 
   <div class="content has-header padding list">
     <div class="item">
-      <input type="text" placeholder="First name">
+      <input type="text" placeholder="Name" id="loginName">
     </div>
     <div class="item">
-      <input type="text" placeholder="Last name">
+      <input type="text" placeholder="Password" id="loginPassword">
     </div>
     <div class="item">
-      <button class="green radius full" onclick="openPage('tabs')">Login</button>
+      <button class="green radius full" onclick="login()">Login</button>
+    </div>
+    <div class="item">
+      <h1>Dont have an account?</h1>
+      <button class="green radius full" onclick="openPage('register')">Register</button>
     </div>
   </div>
 
-  <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="mobileui/mobileui.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script src="https://openlayers.org/en/v4.4.2/build/ol.js"></script>
+  <link rel="stylesheet" type="text/css" href="mobileui/style.css">
 </body>
 
 </html>
