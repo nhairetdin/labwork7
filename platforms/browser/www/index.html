@@ -16,7 +16,7 @@
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/databaseHandler.js"></script>
   <script type="text/javascript" src="js/userHandler.js"></script>
-  
+
   <script type="text/javascript" src="js/index.js"></script>
   <script src="https://openlayers.org/en/v4.4.2/build/ol.js"></script>
   <title>Apache Cordova</title>
@@ -40,7 +40,29 @@
     </div>
     <div class="item">
       <h1>Dont have an account?</h1>
-      <button class="green radius full" onclick="openPage('register')">Register</button>
+      <button class="green radius full" onclick="openMenu('registerMenu')">Register</button>
+    </div>
+
+    <div class="menu menu-right light-blue-500" id="registerMenu">
+      <div class="list no-border">
+
+        <div class="item blue">
+          <h1>Register new account</h1>
+        </div>
+
+        <div class="item">
+          <input type="text" placeholder="Name" id="txtName">
+        </div>
+
+        <div class="item">
+          <input type="password" placeholder="Password" id="txtPassword">
+        </div>
+
+        <div class="item">
+          <button class="green radius full" onclick="addUser()">Register</button>
+        </div>
+
+      </div>
     </div>
   </div>
 

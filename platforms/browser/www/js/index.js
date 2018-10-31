@@ -16,7 +16,7 @@ function addUser() {
       $("#txtName").val("");
       $("#txtPassword").val("");
     }
-    backPage()
+    closeMenu('registerMenu')
   }
 }
 
