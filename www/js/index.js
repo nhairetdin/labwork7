@@ -10,7 +10,7 @@ function addUser() {
   if (!name) {
     alert("Name is required");
   } else {
-    var r = confirm("Name: " + name + "\n" + "Password: " + password);
+    var r = confirm("Register?" + "\n" + "Name: " + name + "\n" + "Password: *****");
     if (r == true) {
       userHandler.addUser(name, password);
       $("#txtName").val("");
